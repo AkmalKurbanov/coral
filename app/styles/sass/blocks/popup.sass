@@ -1,0 +1,125 @@
+.popup
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 5
+  transition: $transition
+  padding: rem(20)
+  pointer-events: none
+  opacity: 0
+  transition: $transition
+  
+
+  &::before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    backdrop-filter: blur(7px)
+    background: rgba(41, 41, 41, 0.5)
+    transition: $transition 
+    transition-delay: .5s
+    opacity: 0
+
+  &__window
+    background: #19191C
+    border-radius: rem(18)
+    padding: rem(39) rem(50)
+    box-shadow: 0 0 0 0.6px #7B7B7B
+    max-width: rem(558)
+    width: 100%
+    margin: auto
+    position: relative
+    z-index: 1  
+    transition: $transition 
+    transition-delay: 1s
+    transform: scale(.5)
+    opacity: 0
+    
+    .title
+      margin-bottom: rem(25)
+    
+    .switch
+      margin-bottom: rem(33)
+
+    .switch__item
+      font-size: rem(20)
+      min-width: rem(135)
+      max-width: rem(135)
+      min-height: rem(55)
+
+  &__col-wrap    
+    margin-left: rem(-6)
+    margin-right: rem(-6)
+    margin-bottom: rem(30)
+    padding-bottom: rem(10)
+    @include fww
+    position: relative
+
+    &:last-child
+      &::after
+        display: none
+
+    &::after
+      position: absolute
+      content: ''
+      width: calc( 100% - 12px )
+      height: 0.5px
+      background: #7B7B7B 
+      left: rem(6)
+      bottom: 0
+      
+  &__col
+    padding: 0 rem(6)
+    margin-bottom: rem(20)
+    
+    &_half
+      width: 50%
+
+    &_full
+      width: 100%
+
+  .select
+    &__label
+      color: #DEDEDE
+      font-size: rem(14)
+      font-weight: 400
+      display: inline-flex
+
+  &__bottom    
+    @include aic-jfcsb
+
+    p
+      font-weight: 700
+      color: #DEDEDE
+      font-size: rem(16)
+
+  &__bottom-btn-wrap
+    @include aic
+    .btn
+      margin-right: rem(18)
+
+      &:last-child
+        margin-right: 0
+
+      &_accent
+        min-width: rem(122) 
+
+  &.active
+    opacity: 1
+    pointer-events: inherit
+    
+    &:before
+      opacity: 1
+
+    .popup__window
+      transform: none
+      opacity: 1

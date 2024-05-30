@@ -1,0 +1,28 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | My Offers | There are no offers available yet.
+block main
+  .wrapper
+    .content
+      include includes/header2
+      
+      .trades
+        .container
+          include includes/empty
+          +empty('My Offers','There are no offers available yet.','empty_centered',true,'Create trade')
+      
+
+      
+      
+    include includes/footer
+
+  include includes/scripts 

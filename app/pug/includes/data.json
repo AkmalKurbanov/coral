@@ -1,0 +1,112 @@
+{
+  "icons": [
+    {
+      "icon": ""
+    }
+  ],
+  "currency": [
+    {
+      "cur": "usd"
+    },
+    {
+      "cur": "ars"
+    },
+    {
+      "cur": "brl"
+    },
+    {
+      "cur": "cad"
+    },
+    {
+      "cur": "clp"
+    },
+    {
+      "cur": "cop"
+    },
+    {
+      "cur": "eur"
+    },
+    {
+      "cur": "gbp"
+    },
+    {
+      "cur": "mxn"
+    },
+    {
+      "cur": "ngn"
+    },
+    {
+      "cur": "thb"
+    },
+    {
+      "cur": "ves"
+    }
+  ],
+  "payments": [
+    {
+      "pay": "paypal",
+      "name": "PayPal"
+    },
+    {
+      "pay": "wise",
+      "name": "Wise"
+    },
+    {
+      "pay": "bank",
+      "name": "Bank transfer"
+    }
+  ],
+  "crypto": [
+    {
+      "img": "axl",
+      "name": "axlUSDC"
+    },
+    {
+      "img": "usk",
+      "name": "USK"
+    },
+    {
+      "img": "kuji",
+      "name": "KUJI"
+    }
+  ],
+  "price": [
+    {
+      "name": "Above"
+    },
+    {
+      "name": "Above2"
+    },
+    {
+      "name": "Above3"
+    }
+  ],
+  "social": [
+    {
+      "icon": "twitter"
+    },
+    {
+      "icon": "discord"
+    },
+    {
+      "icon": "github"
+    },
+    {
+      "icon": "medium"
+    },
+    {
+      "icon": "tokenomika"
+    }
+  ],
+  "status": [
+    {
+      "item": "pause"
+    },
+    {
+      "item": "Expired"
+    },
+    {
+      "item": "Complited"
+    }
+  ]
+}

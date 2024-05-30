@@ -1,0 +1,58 @@
+.trades
+  &__item
+    margin-bottom: rem(30)
+
+    &:last-child
+      margin-bottom: 0
+
+  &__item-inner
+    background: #26262A
+    border-radius: rem(7)
+    padding: rem(27) rem(30)
+    @include aistr
+    min-height: rem(119)
+    .btn
+      height: auto
+
+  &__col
+    border-right: rem(0.5) solid #7B7B7B
+    @include jcc
+    flex-direction: column
+    min-width: rem(257)
+    padding-left: rem(54)
+    padding-right: rem(15)
+
+    &:first-child
+      padding-right: rem(33)
+      padding-left: 0
+      min-width: rem(186)
+
+    &:last-child
+      border: none
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      flex: 1
+      padding-right: 0
+
+  &__item-name
+    margin-bottom: rem(15)
+    font-size: rem(20)
+    color: white
+    font-weight: 700
+
+  &__item-label
+    color: #B0B0B0
+    font-size: rem(16)
+    font-weight: 400
+    margin-bottom: rem(18)
+
+  &__item-user
+    margin-bottom: 0
+
+  &__item-content
+    color: white
+    font-weight: 700
+    font-size: rem(16)
+    &_accent
+      color: $accent

@@ -1,0 +1,139 @@
+.my-offers
+  &__item
+    margin-bottom: rem(20)
+    
+    &:last-child
+      margin-bottom: 0
+
+  &__item-inner
+    background: #26262A
+    padding: rem(29) rem(22)
+    border-radius: rem(7)
+    min-height: rem(103)
+    p
+      font-size: rem(14)
+      line-height: rem(16.83)
+      font-weight: 300
+      color: white
+
+  &__item-inner-wrap
+    @include aic
+    transition: $transition
+    
+    &.hide
+      opacity: 0
+      position: absolute
+      pointer-events: none
+
+  &__status
+    font-size: rem(13)
+    background: #1D2023
+    border-radius: rem(5.63)
+    @include aic-jcc
+    display: inline-flex
+    text-align: center
+    color: white
+    padding: rem(4)
+    min-height: rem(26)
+    margin-right: rem(24)
+
+  &__type
+    font-size: rem(18)
+    font-weight: 600
+    color: white
+    margin-right: rem(44)
+
+  &__limits
+    font-size: rem(16)
+    font-weight: 400
+    color: white
+    margin-right: rem(77)
+
+  &__label
+    font-size: rem(14)
+    font-weight: 400
+    margin-bottom: rem(9)
+    color: #DEDEDE
+
+  &__currency-wrap
+    @include aic-jfcfe
+    flex: 1
+    text-align: right
+
+    .btn
+      margin-left: rem(26)
+      padding-left: rem(22)
+      padding-right: rem(22)
+
+  &__currency
+    font-size: rem(20)
+    font-weight: 700
+    color: white
+    text-align: right
+
+  .edit
+    display: none
+    &__top
+      @include aic-jfcsb
+      padding-bottom: rem(20)
+      box-shadow: 0 0.5px 0 0 #7B7B7B
+      margin-bottom: rem(24)
+
+    &__top-col
+      &:first-child
+        @include aic
+
+        .select
+          margin-right: rem(32)
+
+      .select
+        min-width: rem(206)
+
+        &__selected
+          .select__text
+            color: $accent
+
+    .select
+      &__selected,
+      &__dropdown
+        background: #2E3035
+      &__label
+        font-weight: 400
+        font-size: rem(14)
+
+    &__form
+      margin-left: rem(-5)
+      margin-right: rem(-5)
+      @include jfcsb
+
+    &__input-col
+      padding: 0 rem(5)
+
+      .input,
+      .select
+        min-width: rem(225)
+        max-width: rem(225)
+
+    &__form-bottom
+      @include aife-jfcsb
+      margin-top: rem(37)
+
+      .input
+        @include jfcfe
+        flex-direction: column
+        flex: 1
+        margin-right: rem(105)
+        
+
+    &__form-bottom-btn-wrap
+      @include aife
+      .btn
+        margin-right: rem(25)
+        &_cancel
+          min-height: auto
+
+        &_accent
+          min-width: rem(122)
+
+        &:last-child
+          margin-right: 0  

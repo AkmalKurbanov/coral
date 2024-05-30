@@ -1,0 +1,37 @@
+.table
+  margin-top: rem(45)
+
+  table
+    border-radius: rem(7)
+    padding: rem(30)
+    background: #26262A
+    width: 100%
+    border-spacing: 0
+    th
+      color: #aaa
+      font-weight: 600
+      font-size: rem(20)
+      border-bottom: 0.5px solid #7B7B7B
+      padding: 0 rem(12) rem(20) rem(12)  
+      text-align: left
+
+      &:first-child
+        padding-left: rem(12)
+
+    td
+      color: white
+      font-size: rem(16) 
+      font-weight: 600
+      padding: rem(16) rem(12) 
+
+  &__td-inner
+    @include aic
+    .icon
+      max-width: rem(21)
+      min-width: rem(21)
+      height: rem(21)
+      margin-right: rem(10)
+      fill: white
+      
+  &.table-js
+    display: none
