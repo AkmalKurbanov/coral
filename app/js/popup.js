@@ -1,4 +1,5 @@
-$(".trade-js").on('click', function(){
+$(".offer-popup-js").on('click', function(e){
+  e.preventDefault();
   $(".popup-js").addClass('active');
   $("body").addClass('no-scroll');
 });

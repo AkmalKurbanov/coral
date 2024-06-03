@@ -17,10 +17,13 @@ block main
       
       .trades
         .container
+            
           h2.title.title_h2.title_aic
             | Open Trades
             a(href="#").btn.btn_gray.btn_centered
-              .icon.icon_margin-0
+              span Create trade
+
+              .icon
                 svg
                   use(xlink:href='sprite.svg#plus')
 
@@ -40,7 +43,7 @@ block main
                   div
                     .trades__item-label Time remaining
                     .trades__item-content 05h 58m 39s
-                  a(href="#").btn.btn_accent.view-table-js View trade 
+                  a(href="#").btn.btn_accent View trade 
 
               include includes/table
               

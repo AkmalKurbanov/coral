@@ -9,7 +9,7 @@ block vars
   - var ogimg = '';
 
 block title
-  | Open Trades | +
+  | Open Trades
 block main
   .wrapper
     .content
@@ -19,10 +19,12 @@ block main
         .container
           h2.title.title_h2.title_aic
             | Open Trades
-            a(href="#").btn.btn_gray.btn_centered
-              .icon.icon_margin-0
-                svg
-                  use(xlink:href='sprite.svg#plus')
+            //- a(href="#").btn.btn_gray.btn_centered
+            //-   span Create trade
+
+            //-   .icon
+            //-     svg
+            //-       use(xlink:href='sprite.svg#plus')
 
           .trades__list
             .trades__item 
@@ -41,7 +43,9 @@ block main
                     .trades__item-label Time remaining
                     .trades__item-content 05h 58m 39s
                   a(href="#").btn.btn_accent View trade 
-
+              
+              include includes/table
+            
 
 
 
