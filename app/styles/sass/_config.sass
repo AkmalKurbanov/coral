@@ -7,11 +7,9 @@ $lineheight: 1.65 // Document Line Height
 $userfont: Aileron // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
-
 $wc: #fff
 $bc: #000
 $transition: all .3s
-
 
 // Bootstrap compatible gutter variable => $gutter
 // $grid-gutter-width: 30px
@@ -24,19 +22,20 @@ $transition: all .3s
 @import 'blocks/mixins/_media'
 @import 'node_modules/normalize.css/normalize'
 @import 'node_modules/overlayscrollbars/styles/overlayscrollbars'
+@import 'node_modules/aos/dist/aos'
 // @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 // @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
 
 // FONTS LOAD SECTION
-						
+
 @mixin font($fname, $fstyle, $fweight, $furl)
-	@font-face
-		font-family: $fname
-		font-style: $fstyle
-		font-weight: $fweight
-		src: url($furl) format('woff2')
+  @font-face
+    font-family: $fname
+    font-style: $fstyle
+    font-weight: $fweight
+    src: url($furl) format('woff2')
 
 @include font('Aileron', normal, 200, '../fonts/Aileron-thin.woff2')
 @include font('Aileron', normal, 300, '../fonts/Aileron-light.woff2')
@@ -46,56 +45,73 @@ $transition: all .3s
 
 // GENERAL CSS SETTINGS
 
-
 $maxWidth: 1920
 $maxWidthContainer: 840
 
 @mixin adaptiv($property, $startSize, $minSize, $type)
-	$addSize: $startSize - $minSize
+  $addSize: $startSize - $minSize
 
-	@if $type==1
-		// Только если меньше контейнера
-		#{property}: $startSize + px
+  @if $type==1
+    // Только если меньше контейнера
+    #{property}: $startSize + px
 
-		@media(max-width: #{$maxWidthContainer + px})
-			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+    @media(max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
 
-	@else if type==2
-		// Только если больше контейнера
-		#{property}: $startSize + px
+  @else if type==2
+    // Только если больше контейнера
+    #{property}: $startSize + px
 
-		@media(max-width: #{$maxWidthContainer + px})
-			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}))
+    @media(max-width: #{$maxWidthContainer + px})
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}))
 
-	@else
-		// Всегда
-		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}))
-
+  @else
+    // Всегда
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}))
 
 ::placeholder
-	color: #666
+  color: #666
 
 ::selection
-	background-color: $accent
-	color: #fff
+  background-color: $accent
+  color: #fff
 
 input, textarea
-	outline: none
-	&:focus:required:invalid
-		border-color: red
-	&:required:valid
-		border-color: green
+  outline: none
+  &:focus:required:invalid
+    border-color: red
+  &:required:valid
+    border-color: green
 
 body
-	background: #111116
-	font-family: $userfont
-	font-size: $fontsize
-	color: $tc
-	min-width: rem(320)
-	position: relative
-	overflow-x: hidden
+  background: #111116
+  font-family: $userfont
+  font-size: $fontsize
+  color: $tc
+  min-width: rem(320)
+  position: relative
+  overflow-x: hidden
 
+  &.no-scroll
+    overflow: hidden
+    position: relative
 
+    &::before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      backdrop-filter: blur(7px)
+      background: rgba(41, 41, 41, 0.5)
+      transition: $transition
+      transition-delay: .5s
+      z-index: 9
 
-.os-scrollbar-vertical .os-scrollbar-handle
-	background: rgba($accent, .4)
+.os-scrollbar-vertical,
+.os-scrollbar-horizontal  
+  .os-scrollbar-handle
+    background: rgba($accent, .4)

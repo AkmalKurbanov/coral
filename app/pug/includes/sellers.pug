@@ -7,7 +7,8 @@
         .sellers-table__th.seller-th-js Trader 
         .sellers-table__th.seller-th-js Price
         .sellers-table__th.seller-th-js Trade limit
-        .sellers-table__th.sellers-table__th_filter.seller-th-js Payment method
+        .sellers-table__th.sellers-table__th_filter.seller-th-js 
+          span Payment method
           .sellers-table__filter.filter
             .filter__icon.filter-js
               .icon
@@ -58,13 +59,21 @@
             .sellers-table__tr-top
               .sellers-table__td.sellers-table__td_tarder.seller-td-js
                 .sellers-table__trader 
-                  .sellers-table__trader-name kujira1p...ce46v8
+                  .sellers-table__trader-name-wrap 
+                    .sellers-table__trader-name kujira1p...ce46v8
+                    .sellers-table__trader-rang Rang
+                      span 98% 
+
                   .sellers-table__trader-info 
                     .sellers-table__trader-trades 
                       span 0 
                       | trades
                     .sellers-table__trader-rang Rang
                       span 98% 
+
+                    .sellers-table__counter refresh in  
+                      span 20
+                      | s  
 
               .sellers-table__td.sellers-table__td_hidden
                 .sellers-table__payment
@@ -90,8 +99,12 @@
 
               .sellers-table__td.sellers-table__td_payment.seller-td-js
                 .sellers-table__payment
-                  .sellers-table__payment-name Wise
-                  a(href="#").btn.btn_accent.seller-buy-js Buy
+                  .sellers-table__payment-item
+                    .sellers-table__payment-name Wise
+                  .sellers-table__payment-item.sellers-table__payment-item_cur
+                    .sellers-table__price USD 1.05
+                  .sellers-table__payment-item
+                    a(href="#").btn.btn_accent.seller-buy-js Buy
 
             .sellers-table__tr-bottom
               form(action="").sellers-table__form#table-form 
@@ -129,9 +142,9 @@
                     p Trade time limit
                     span 6 hours
                   .sellers-table__form-bottom-col
-                  .sellers-table__form-btn-wrap 
-                      .btn.btn_cancel.seller-cancel-js Cancel
-                      .btn.btn_accent.btn_disabled.trade-js Open trade
+                    .sellers-table__form-btn-wrap 
+                        .btn.btn_cancel.seller-cancel-js Cancel
+                        .btn.btn_accent.btn_disabled.trade-js Open trade
 
 
 

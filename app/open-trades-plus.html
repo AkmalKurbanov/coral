@@ -145,22 +145,23 @@
                                               </div></a>
                     </div>
                   </div>
-                </div><a class="btn btn_bordered" href="#">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="sprite.svg#hashtag"></use>
-                    </svg>
-                  </div><span>My Open Trades</span></a><a class="btn btn_bordered btn_my-history" href="#">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="sprite.svg#history"></use>
-                    </svg>
-                  </div><span>My History</span></a><a class="btn btn_accent btn_accent-bordered" href="#">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="sprite.svg#log2"></use>
-                    </svg>
-                  </div><span>Username</span></a>
+                </div>
+                <div class="header__btn-wrap"><a class="btn btn_bordered" href="#">
+                    <div class="icon">
+                      <svg>
+                        <use xlink:href="sprite.svg#hashtag"></use>
+                      </svg>
+                    </div><span>My Open Trades</span></a><a class="btn btn_bordered btn_my-history" href="#">
+                    <div class="icon">
+                      <svg>
+                        <use xlink:href="sprite.svg#history"></use>
+                      </svg>
+                    </div><span>My History</span></a><a class="btn btn_accent btn_accent-bordered btn_user" href="#">
+                    <div class="icon">
+                      <svg>
+                        <use xlink:href="sprite.svg#log2"></use>
+                      </svg>
+                    </div><span>Username</span></a></div>
               </div>
             </div>
           </div>
@@ -175,23 +176,25 @@
                 </div></a></h2>
             <div class="trades__list">
               <div class="trades__item"> 
-                <div class="trades__col">
-                  <div class="trades__item-name">Buying axlUSDC</div>
-                  <div class="trades__item-user trades__item-label">from username</div>
-                </div>
-                <div class="trades__col">
-                  <div class="trades__item-label">Amount</div>
-                  <div class="trades__item-content">2 axlUSDC</div>
-                </div>
-                <div class="trades__col">
-                  <div class="trades__item-label">Status</div>
-                  <div class="trades__item-content trades__item-content_accent">Waiting for funds</div>
-                </div>
-                <div class="trades__col">
-                  <div>
-                    <div class="trades__item-label">Time remaining</div>
-                    <div class="trades__item-content">05h 58m 39s</div>
-                  </div><a class="btn btn_accent" href="#">View trade </a>
+                <div class="trades__item-inner">
+                  <div class="trades__col">
+                    <div class="trades__item-name">Buying axlUSDC</div>
+                    <div class="trades__item-user trades__item-label">from username</div>
+                  </div>
+                  <div class="trades__col">
+                    <div class="trades__item-label">Amount</div>
+                    <div class="trades__item-content">2 axlUSDC</div>
+                  </div>
+                  <div class="trades__col">
+                    <div class="trades__item-label">Status</div>
+                    <div class="trades__item-content trades__item-content_accent">Waiting for funds</div>
+                  </div>
+                  <div class="trades__col">
+                    <div>
+                      <div class="trades__item-label">Time remaining</div>
+                      <div class="trades__item-content">05h 58m 39s</div>
+                    </div><a class="btn btn_accent" href="#">View trade </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -237,6 +240,7 @@
             </div>
           </div>
         </div>
+        <div class="footer__links"> <a class="footer__links-item" href="#">My History</a><a class="footer__links-item" href="#">My Open Trades</a></div>
       </footer>
     </div>
     <script src="js/app.min.js"> </script>

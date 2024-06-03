@@ -4,6 +4,9 @@
 
   .btn
     margin-left: rem(20)
+    @include xs
+      min-height: rem(30)
+      font-size: rem(14)
     
   &_centered
     text-align: center
@@ -12,13 +15,13 @@
     @include aic
 
   &_h1
-    @include adaptiv('font-size', 48, 27, 0)
-    @include adaptiv('line-height', 58, 37, 0)
-    @include adaptiv('margin-bottom', 15, 10, 0)
+    @include adaptiv('font-size', 48, 34, 0)
+    @include adaptiv('line-height', 58, 40, 0)
+    @include adaptiv('margin-bottom', 15, 12, 0)
   
   &_h2
-    @include adaptiv('font-size', 32, 18, 0)
-    @include adaptiv('line-height', 38, 28, 0)
+    @include adaptiv('font-size', 32, 16, 0)
+    @include adaptiv('line-height', 38, 19, 0)
     @include adaptiv('margin-bottom', 15, 10, 0)
 
   
@@ -69,13 +72,18 @@
 .subtitle
   color: white
   font-weight: 300
-  @include adaptiv('font-size', 32, 20, 0)
-  @include adaptiv('line-height', 43, 24, 0)
+  @include adaptiv('font-size', 32, 16, 0)
+  @include adaptiv('line-height', 43, 21, 0)
   @include adaptiv('margin-bottom', 15, 10, 0)
   letter-spacing: 0.65px
+  
   span
     font-weight: 600
     color: $accent
+
+  br
+    @include sm
+      display: none  
     
   &_centered
     text-align: center

@@ -42,22 +42,23 @@ header.header
               +notification  
               +notification  
 
-        a(href="#").btn.btn_bordered
-          .icon
-            svg
-              use(xlink:href='sprite.svg#hashtag')
-          span My Open Trades
+        .header__btn-wrap
+          a(href="#").btn.btn_bordered
+            .icon
+              svg
+                use(xlink:href='sprite.svg#hashtag')
+            span My Open Trades
 
-        a(href="#").btn.btn_bordered.btn_my-history
-          .icon
-            svg
-              use(xlink:href='sprite.svg#history')
-          span My History
+          a(href="#").btn.btn_bordered.btn_my-history
+            .icon
+              svg
+                use(xlink:href='sprite.svg#history')
+            span My History
 
-        a(href="#").btn.btn_accent.btn_accent-bordered
-          .icon
-            svg
-              use(xlink:href='sprite.svg#log2')
+          a(href="#").btn.btn_accent.btn_accent-bordered.btn_user
+            .icon
+              svg
+                use(xlink:href='sprite.svg#log2')
 
 
-          span Username
+            span Username

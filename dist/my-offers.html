@@ -145,22 +145,23 @@
                                               </div></a>
                     </div>
                   </div>
-                </div><a class="btn btn_bordered" href="#">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="sprite.svg#hashtag"></use>
-                    </svg>
-                  </div><span>My Open Trades</span></a><a class="btn btn_bordered btn_my-history" href="#">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="sprite.svg#history"></use>
-                    </svg>
-                  </div><span>My History</span></a><a class="btn btn_accent btn_accent-bordered" href="#">
-                  <div class="icon">
-                    <svg>
-                      <use xlink:href="sprite.svg#log2"></use>
-                    </svg>
-                  </div><span>Username</span></a>
+                </div>
+                <div class="header__btn-wrap"><a class="btn btn_bordered" href="#">
+                    <div class="icon">
+                      <svg>
+                        <use xlink:href="sprite.svg#hashtag"></use>
+                      </svg>
+                    </div><span>My Open Trades</span></a><a class="btn btn_bordered btn_my-history" href="#">
+                    <div class="icon">
+                      <svg>
+                        <use xlink:href="sprite.svg#history"></use>
+                      </svg>
+                    </div><span>My History</span></a><a class="btn btn_accent btn_accent-bordered btn_user" href="#">
+                    <div class="icon">
+                      <svg>
+                        <use xlink:href="sprite.svg#log2"></use>
+                      </svg>
+                    </div><span>Username</span></a></div>
               </div>
             </div>
           </div>
@@ -177,7 +178,7 @@
                             <div class="my-offers__item">
                               <div class="my-offers__item-inner">
                                 <div class="my-offers__item-inner-wrap">
-                                  <div class="my-offers__status">Paused</div>
+                                  <div class="my-offers__status"> <span>Paused</span></div>
                                   <div class="my-offers__type">Buying</div>
                                   <div class="my-offers__limits">
                                     <div class="my-offers__label">Limits</div>20-2000 axIUSDC 
@@ -230,6 +231,8 @@
                                           </div>
                                         </div>
                                       </div>
+                                    </div>
+                                    <div class="edit__top-col">                        
                                       <div class="my-offers__type">Buying</div>
                                     </div>
                                     <div class="edit__top-col">
@@ -295,9 +298,73 @@
                                       </div>
                                     </div>
                                     <div class="edit__form-bottom">     
-                                      <div class="input">
-                                        <label for="description">Edit offer description</label>
-                                        <textarea id="description" name="description" placeholder="Edit offer description">Bank Transfer (Instant SEPA), PayPal. Contact me on telegram: @ForestMouse  </textarea>
+                                      <div class="select select_multiple"> 
+                                        <div class="select__label">Payment method</div>
+                                        <div class="select__inner"> 
+                                          <div class="select__selected select-js">
+                                            <div class="select__col">  
+                                              <div class="select__img"> <img src="images/dist/paypal.webp" alt=""></div>
+                                              <div class="select__text select-txt-js">PayPal</div>
+                                            </div>
+                                            <div class="select__col">  
+                                              <div class="icon">
+                                                <svg>
+                                                  <use xlink:href="sprite.svg#angle"> </use>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="select__dropdown scroll-js">
+                                            <label class="select__item" for="paypal">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/paypal.webp" alt=""></div>
+                                                <div class="select__text">PayPal</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="paypal" id="paypal" value="PayPal"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <label class="select__item" for="wise">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/wise.webp" alt=""></div>
+                                                <div class="select__text">Wise</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="wise" id="wise" value="Wise"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <label class="select__item" for="bank">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/bank.webp" alt=""></div>
+                                                <div class="select__text">Bank transfer</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="bank" id="bank" value="Bank transfer"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                          </div>
+                                        </div>
                                       </div>
                                       <div class="edit__form-bottom-btn-wrap"> 
                                         <div class="btn btn_cancel my-offers-edit-cancel-js">Cancel</div>
@@ -311,7 +378,7 @@
                             <div class="my-offers__item">
                               <div class="my-offers__item-inner">
                                 <div class="my-offers__item-inner-wrap">
-                                  <div class="my-offers__status">Paused</div>
+                                  <div class="my-offers__status"> <span>Paused</span></div>
                                   <div class="my-offers__type">Buying</div>
                                   <div class="my-offers__limits">
                                     <div class="my-offers__label">Limits</div>20-2000 axIUSDC 
@@ -364,6 +431,8 @@
                                           </div>
                                         </div>
                                       </div>
+                                    </div>
+                                    <div class="edit__top-col">                        
                                       <div class="my-offers__type">Buying</div>
                                     </div>
                                     <div class="edit__top-col">
@@ -429,9 +498,73 @@
                                       </div>
                                     </div>
                                     <div class="edit__form-bottom">     
-                                      <div class="input">
-                                        <label for="description">Edit offer description</label>
-                                        <textarea id="description" name="description" placeholder="Edit offer description">Bank Transfer (Instant SEPA), PayPal. Contact me on telegram: @ForestMouse  </textarea>
+                                      <div class="select select_multiple"> 
+                                        <div class="select__label">Payment method</div>
+                                        <div class="select__inner"> 
+                                          <div class="select__selected select-js">
+                                            <div class="select__col">  
+                                              <div class="select__img"> <img src="images/dist/paypal.webp" alt=""></div>
+                                              <div class="select__text select-txt-js">PayPal</div>
+                                            </div>
+                                            <div class="select__col">  
+                                              <div class="icon">
+                                                <svg>
+                                                  <use xlink:href="sprite.svg#angle"> </use>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="select__dropdown scroll-js">
+                                            <label class="select__item" for="paypal">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/paypal.webp" alt=""></div>
+                                                <div class="select__text">PayPal</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="paypal" id="paypal" value="PayPal"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <label class="select__item" for="wise">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/wise.webp" alt=""></div>
+                                                <div class="select__text">Wise</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="wise" id="wise" value="Wise"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <label class="select__item" for="bank">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/bank.webp" alt=""></div>
+                                                <div class="select__text">Bank transfer</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="bank" id="bank" value="Bank transfer"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                          </div>
+                                        </div>
                                       </div>
                                       <div class="edit__form-bottom-btn-wrap"> 
                                         <div class="btn btn_cancel my-offers-edit-cancel-js">Cancel</div>
@@ -445,7 +578,7 @@
                             <div class="my-offers__item">
                               <div class="my-offers__item-inner">
                                 <div class="my-offers__item-inner-wrap">
-                                  <div class="my-offers__status">Paused</div>
+                                  <div class="my-offers__status"> <span>Paused</span></div>
                                   <div class="my-offers__type">Buying</div>
                                   <div class="my-offers__limits">
                                     <div class="my-offers__label">Limits</div>20-2000 axIUSDC 
@@ -498,6 +631,8 @@
                                           </div>
                                         </div>
                                       </div>
+                                    </div>
+                                    <div class="edit__top-col">                        
                                       <div class="my-offers__type">Buying</div>
                                     </div>
                                     <div class="edit__top-col">
@@ -563,9 +698,73 @@
                                       </div>
                                     </div>
                                     <div class="edit__form-bottom">     
-                                      <div class="input">
-                                        <label for="description">Edit offer description</label>
-                                        <textarea id="description" name="description" placeholder="Edit offer description">Bank Transfer (Instant SEPA), PayPal. Contact me on telegram: @ForestMouse  </textarea>
+                                      <div class="select select_multiple"> 
+                                        <div class="select__label">Payment method</div>
+                                        <div class="select__inner"> 
+                                          <div class="select__selected select-js">
+                                            <div class="select__col">  
+                                              <div class="select__img"> <img src="images/dist/paypal.webp" alt=""></div>
+                                              <div class="select__text select-txt-js">PayPal</div>
+                                            </div>
+                                            <div class="select__col">  
+                                              <div class="icon">
+                                                <svg>
+                                                  <use xlink:href="sprite.svg#angle"> </use>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="select__dropdown scroll-js">
+                                            <label class="select__item" for="paypal">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/paypal.webp" alt=""></div>
+                                                <div class="select__text">PayPal</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="paypal" id="paypal" value="PayPal"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <label class="select__item" for="wise">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/wise.webp" alt=""></div>
+                                                <div class="select__text">Wise</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="wise" id="wise" value="Wise"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <label class="select__item" for="bank">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/bank.webp" alt=""></div>
+                                                <div class="select__text">Bank transfer</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="bank" id="bank" value="Bank transfer"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                          </div>
+                                        </div>
                                       </div>
                                       <div class="edit__form-bottom-btn-wrap"> 
                                         <div class="btn btn_cancel my-offers-edit-cancel-js">Cancel</div>
@@ -579,7 +778,7 @@
                             <div class="my-offers__item">
                               <div class="my-offers__item-inner">
                                 <div class="my-offers__item-inner-wrap">
-                                  <div class="my-offers__status">Paused</div>
+                                  <div class="my-offers__status"> <span>Paused</span></div>
                                   <div class="my-offers__type">Buying</div>
                                   <div class="my-offers__limits">
                                     <div class="my-offers__label">Limits</div>20-2000 axIUSDC 
@@ -632,6 +831,8 @@
                                           </div>
                                         </div>
                                       </div>
+                                    </div>
+                                    <div class="edit__top-col">                        
                                       <div class="my-offers__type">Buying</div>
                                     </div>
                                     <div class="edit__top-col">
@@ -697,9 +898,73 @@
                                       </div>
                                     </div>
                                     <div class="edit__form-bottom">     
-                                      <div class="input">
-                                        <label for="description">Edit offer description</label>
-                                        <textarea id="description" name="description" placeholder="Edit offer description">Bank Transfer (Instant SEPA), PayPal. Contact me on telegram: @ForestMouse  </textarea>
+                                      <div class="select select_multiple"> 
+                                        <div class="select__label">Payment method</div>
+                                        <div class="select__inner"> 
+                                          <div class="select__selected select-js">
+                                            <div class="select__col">  
+                                              <div class="select__img"> <img src="images/dist/paypal.webp" alt=""></div>
+                                              <div class="select__text select-txt-js">PayPal</div>
+                                            </div>
+                                            <div class="select__col">  
+                                              <div class="icon">
+                                                <svg>
+                                                  <use xlink:href="sprite.svg#angle"> </use>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="select__dropdown scroll-js">
+                                            <label class="select__item" for="paypal">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/paypal.webp" alt=""></div>
+                                                <div class="select__text">PayPal</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="paypal" id="paypal" value="PayPal"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <label class="select__item" for="wise">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/wise.webp" alt=""></div>
+                                                <div class="select__text">Wise</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="wise" id="wise" value="Wise"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <label class="select__item" for="bank">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/bank.webp" alt=""></div>
+                                                <div class="select__text">Bank transfer</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="bank" id="bank" value="Bank transfer"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                          </div>
+                                        </div>
                                       </div>
                                       <div class="edit__form-bottom-btn-wrap"> 
                                         <div class="btn btn_cancel my-offers-edit-cancel-js">Cancel</div>
@@ -713,7 +978,7 @@
                             <div class="my-offers__item">
                               <div class="my-offers__item-inner">
                                 <div class="my-offers__item-inner-wrap">
-                                  <div class="my-offers__status">Paused</div>
+                                  <div class="my-offers__status"> <span>Paused</span></div>
                                   <div class="my-offers__type">Buying</div>
                                   <div class="my-offers__limits">
                                     <div class="my-offers__label">Limits</div>20-2000 axIUSDC 
@@ -766,6 +1031,8 @@
                                           </div>
                                         </div>
                                       </div>
+                                    </div>
+                                    <div class="edit__top-col">                        
                                       <div class="my-offers__type">Buying</div>
                                     </div>
                                     <div class="edit__top-col">
@@ -831,9 +1098,73 @@
                                       </div>
                                     </div>
                                     <div class="edit__form-bottom">     
-                                      <div class="input">
-                                        <label for="description">Edit offer description</label>
-                                        <textarea id="description" name="description" placeholder="Edit offer description">Bank Transfer (Instant SEPA), PayPal. Contact me on telegram: @ForestMouse  </textarea>
+                                      <div class="select select_multiple"> 
+                                        <div class="select__label">Payment method</div>
+                                        <div class="select__inner"> 
+                                          <div class="select__selected select-js">
+                                            <div class="select__col">  
+                                              <div class="select__img"> <img src="images/dist/paypal.webp" alt=""></div>
+                                              <div class="select__text select-txt-js">PayPal</div>
+                                            </div>
+                                            <div class="select__col">  
+                                              <div class="icon">
+                                                <svg>
+                                                  <use xlink:href="sprite.svg#angle"> </use>
+                                                </svg>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="select__dropdown scroll-js">
+                                            <label class="select__item" for="paypal">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/paypal.webp" alt=""></div>
+                                                <div class="select__text">PayPal</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="paypal" id="paypal" value="PayPal"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <label class="select__item" for="wise">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/wise.webp" alt=""></div>
+                                                <div class="select__text">Wise</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="wise" id="wise" value="Wise"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <label class="select__item" for="bank">
+                                              <div class="select__col">
+                                                <div class="select__img"> <img src="images/dist/bank.webp" alt=""></div>
+                                                <div class="select__text">Bank transfer</div>
+                                              </div>
+                                              <div class="select__col">
+                                                <div class="select__checkbox">
+                                                  <input type="checkbox" name="bank" id="bank" value="Bank transfer"><span> 
+                                                    <div class="icon">
+                                                      <svg>
+                                                        <use xlink:href="sprite.svg#check"></use>
+                                                      </svg>
+                                                    </div></span>
+                                                </div>
+                                              </div>
+                                            </label>
+                                          </div>
+                                        </div>
                                       </div>
                                       <div class="edit__form-bottom-btn-wrap"> 
                                         <div class="btn btn_cancel my-offers-edit-cancel-js">Cancel</div>
@@ -922,6 +1253,7 @@
             </div>
           </div>
         </div>
+        <div class="footer__links"> <a class="footer__links-item" href="#">My History</a><a class="footer__links-item" href="#">My Open Trades</a></div>
       </footer>
     </div>
     <script src="js/app.min.js"> </script>

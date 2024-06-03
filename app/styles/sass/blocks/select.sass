@@ -11,12 +11,12 @@
 
   &__selected
     @include aic-jfcsb
-    padding: rem(12) rem(15)
+    padding: 0 rem(15)
     min-height: rem(44)
     cursor: pointer
     border-radius: rem(6)
     background: #26262A
-    box-shadow: 0 0 0 0.2px white
+    // box-shadow: 0 0 0 0.2px white
 
     .icon
       transition: $transition
@@ -28,7 +28,7 @@
 
     &.active
       border-radius: rem(6) rem(6) 0 0
-      box-shadow: none
+      // box-shadow: none
 
       .icon
         transform: rotate(180deg)
@@ -66,9 +66,9 @@
     left: 0
     transition: $transition
     background: #26262A
-    box-shadow: 0 0.2px 0 0.2px white
+    // box-shadow: 0 0.2px 0 0.2px white
     border-radius: 0 0 rem(6) rem(6)
-    max-height: rem(465)
+    max-height: rem(175)
 
 
     &.active
@@ -76,7 +76,7 @@
       pointer-events: inherit
       top: calc( 100% - 1px )
       z-index: 1
-      box-shadow: none
+      // box-shadow: none
     
   &__item
     padding: rem(7) rem(15)

@@ -5,11 +5,11 @@
   &__inner
     @include aistr
     display: inline-flex
-    box-shadow: 0 0 0 0.2px white
-    border-radius: rem(8)
+    // box-shadow: 0 0 0 0.2px white
     overflow: hidden
     position: relative
     background: #292C30
+    @include adaptiv('border-radius', 8, 7, 0)
 
   &__item 
     @include aic-jcc
@@ -17,10 +17,10 @@
     color: #838383
     font-weight: 700
     transition: $transition
-    font-size: rem(25)
-    min-width: rem(168)
-    max-width: rem(168)
-    min-height: rem(69)
+    @include adaptiv('font-size', 25, 20, 0)
+    @include adaptiv('min-width', 168, 140, 0)
+    @include adaptiv('max-width', 168, 140, 0)
+    @include adaptiv('min-height', 69, 57 , 0)
     padding: rem(9) 
     cursor: pointer
     position: relative

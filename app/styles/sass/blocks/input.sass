@@ -1,6 +1,6 @@
 .input-wrap
   @include fww
-  
+
 .input
   position: relative
 
@@ -9,7 +9,7 @@
     font-size: rem(14)
     margin-bottom: rem(15)
     display: inline-flex
-    
+
   label.error
     margin-bottom: 0
     position: absolute
@@ -70,10 +70,10 @@
     &:hover
       .icon
         fill: $accent
-      
+
       .input__info-window
-        top: 100%
-        opacity: 1  
+        bottom: calc( 100% + 10px )
+        opacity: 1
 
   &__info-window
     position: absolute
@@ -81,12 +81,16 @@
     box-shadow: 0 0 0 0.2px white
     border-radius: rem(6)
     transition: $transition
-    left: 100%
-    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 0
     padding: rem(10)
     min-width: rem(300)
     opacity: 0
     pointer-events: none
+
+    @include xs
+      min-width: rem(250)
 
     p
       font-size: rem(12)
@@ -95,11 +99,13 @@
       font-weight: 400
       margin-bottom: rem(5)
       
+      @include xs
+        font-size: rem(10)
+        line-height: rem(15)
+        
+
       &:last-child
         margin: 0
-
-
-
 
   &.error,
   &.success
@@ -108,7 +114,7 @@
       top: calc( 100% + 9px )
       margin: 0
       opacity: 1
-  
+
   &.error
     input
       border-color: red
@@ -122,4 +128,3 @@
 
     .input__message
       color: green
-      
