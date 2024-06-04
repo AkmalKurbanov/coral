@@ -100,13 +100,13 @@
   ],
   "status": [
     {
-      "item": "pause"
+      "item": "Pause"
     },
     {
       "item": "Expired"
     },
     {
-      "item": "Complited"
+      "item": "Completed"
     }
   ]
 }
