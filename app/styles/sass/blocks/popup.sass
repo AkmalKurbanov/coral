@@ -36,7 +36,7 @@
     
     .title
       @include adaptiv('font-size', 32, 23, 0)
-      @include adaptiv('margin-bottom', 25, 20, 0)
+      @include adaptiv('margin-bottom', 25, 21, 0)
     
     .switch
       margin-bottom: rem(33)
@@ -71,43 +71,50 @@
       left: rem(6)
       bottom: 0
 
+    .select
+      &__selected
+        @include xs
+          background: #2E3035
+          
     &_input-wrap
       
       .popup__col
         @include xs
-          margin-bottom: rem(10)
+          margin-bottom: rem(15)
         
       .select,
       .input
         @include xs
           margin-left: auto  
           margin-right: auto  
-          max-width: rem(178)
         
         .select__label,
         label
-          font-size: rem(10)
-          margin-bottom: rem(8)
+          font-size: rem(12)
+          margin-bottom: rem(13)
         
         input
           @include xs
-            min-height: rem(32)   
+            min-height: rem(40)   
             border-radius: rem(4)
-            padding: 0 rem(12)
-            font-size: rem(8)
+            padding: 0 rem(15)
+            font-size: rem(12)
+            background: #2E3035
       .select
+
         &__selected
           @include xs
-            min-height: rem(32)
+            background: #2E3035
+            min-height: rem(40)
 
           .icon
             @include xs
-              max-width: rem(12)
-              min-width: rem(12)
-              height: rem(12)
+              max-width: rem(19)
+              min-width: rem(19)
+              height: rem(19)
         &__text
           @include xs
-            font-size: rem(10)
+            font-size: rem(12)
 
   &__col
     padding: 0 rem(6)
@@ -131,6 +138,9 @@
       font-size: rem(14)
       font-weight: 400
       display: inline-flex
+
+      @include xs
+        font-size: rem(16)
 
   &__bottom    
     @include aic-jfcsb
