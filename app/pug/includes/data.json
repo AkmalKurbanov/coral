@@ -68,6 +68,10 @@
     {
       "img": "kuji",
       "name": "KUJI"
+    },
+    {
+      "img": "yum",
+      "name": "yum"
     }
   ],
   "price": [

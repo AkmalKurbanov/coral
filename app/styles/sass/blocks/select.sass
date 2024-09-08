@@ -48,6 +48,7 @@
 
     img
       width: 100%
+      // image-rendering: pixelated
 
   &__text
     font-size: rem(17)
@@ -70,14 +71,13 @@
     border-radius: 0 0 rem(6) rem(6)
     max-height: rem(175)
 
-
     &.active
       opacity: 1
       pointer-events: inherit
       top: calc( 100% - 1px )
       z-index: 1
       // box-shadow: none
-    
+
   &__item
     padding: rem(7) rem(15)
     transition: $transition
@@ -90,8 +90,6 @@
     &:hover
       background: #414141
 
-
-       
   &__checkbox
     span
       max-width: rem(19)
@@ -101,7 +99,7 @@
       background: #575757
       @include aic-jcc
       transition: $transition
-      
+
       .icon
         max-width: rem(19)
         min-width: rem(19)
@@ -121,4 +119,3 @@
         ~
           span
             background: $accent
-
