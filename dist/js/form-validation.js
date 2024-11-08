@@ -1,5 +1,5 @@
-import $ from "jquery";
-import "jquery-validation";
+// import $ from "jquery";
+// import "jquery-validation";
 // Example usage:
 $(document).ready(function () {
   $(function () {
